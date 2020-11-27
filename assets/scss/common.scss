@@ -1,0 +1,90 @@
+@import "helpers/mediaQueries";
+// Global usage classes(allowed access from all components)
+// Colors
+$mainBlack: #012345;
+$bodyBackground: #fcfcfc;
+$mainGrey: #677B8F;
+$greyBackgroundColor: #F3F4F7;
+$mainBlue: #4959FF;
+$mainPink: #F84AB3;
+  // Fonts
+@font-face {
+  font-family: 'CodecPro';
+  src: url('~assets/fonts/CodecPro-News.eot');
+  src: local('CodecPro'),
+  url('~assets/fonts/CodecPro-News.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/CodecPro-News.woff2') format('woff2'),
+  url('~assets/fonts/CodecPro-News.woff') format('woff'),
+  url('~assets/fonts/CodecPro-News.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CodecProBold';
+  src: url('~assets/fonts/CodecPro-Bold.eot');
+  src: local('CodecProBold'), local('CodecProBold'),
+  url('~assets/fonts/CodecPro-Bold.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/CodecPro-Bold.woff2') format('woff2'),
+  url('~assets/fonts/CodecPro-Bold.woff') format('woff'),
+  url('~assets/fonts/CodecPro-Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CodecProLight';
+  src: url('~assets/fonts/CodecPro-Light.eot');
+  src: local('CodecProL'), local('CodecProL'),
+  url('~assets/fonts/CodecPro-Light.eot?#iefix') format('embedded-opentype'),
+  url('~assets/fonts/CodecPro-Light.woff2') format('woff2'),
+  url('~assets/fonts/CodecPro-Light.woff') format('woff'),
+  url('~assets/fonts/CodecPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+// Grid
+.gs_container {
+  max-width: 1920px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.gs_row {
+  display: flex;
+}
+
+// Repetitive
+.gs_disable_text_selection {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+// Animation
+.fade-up-enter-active,
+.fade-up-leave-active {
+  transition: all 0.4s ease-in-out;
+}
+.fade-up-enter,
+.fade-up-leave-to {
+  opacity: 0;
+}
+.bounce-enter-active {
+  animation: bounce-in 0.5s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
